@@ -24,23 +24,23 @@ class User extends Admin_Controller
         $id == NULL ||$this->data['user'] = $this->user_m->get($id);
         $this->data['subview'] = 'admin/user/edit';
         $this->load->view('admin/_layout_main', $this->data);
-//        if ($id) {
-//            $this->data['user'] = $this->user_m->get($id);
-//            count($this->data['user']) || $this->data['errors'][] = 'User could not be found';
-//        }
-//        else {
-//            $this->data['user'] = $this->user_m->get_new();
-//        }
-//
-//        $rules = $this->user_m->rules_admin;
-//        $id || $rules['password']['rules'] .= '|required';
-//        $this->form_validation->set_rules($rules);
-//        if ($this->form_validation->run() == TRUE) {
-//            $data = $this->user_m->array_from_post(array('name', 'email', 'password'));
-//            $data['password'] = $this->user_m->hash($data['password']);
-//            $this->user_m->save($data, $id);
-//            redirect('admin/user');
-//        }
+        if ($id) {
+            $this->data['user'] = $this->user_m->get($id);
+            count($this->data['user']) || $this->data['errors'][] = 'User could not be found';
+        }
+        else {
+            $this->data['user'] = $this->user_m->get_new();
+        }
+
+        $rules = $this->user_m->rules_admin;
+        $id || $rules['password']['rules'] .= '|required';
+        $this->form_validation->set_rules($rules);
+        if ($this->form_validation->run() == TRUE) {
+            $data = $this->user_m->array_from_post(array('name', 'email', 'password'));
+            $data['password'] = $this->user_m->hash($data['password']);
+            $this->user_m->save($data, $id);
+            redirect('admin/user');
+        }
 
 
     }

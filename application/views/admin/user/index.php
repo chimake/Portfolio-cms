@@ -20,7 +20,7 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="header">
-                        <h2><strong>User</strong>List <a href="edit" class="btn btn-success btn-round">Create New User</a></h2>
+                        <h2><strong>User</strong>List <a href="user/edit/" class="btn btn-success btn-round">Create New User</a></h2>
 
                     </div>
                     <div class="body">
@@ -41,8 +41,8 @@
                                     <tr>
                                         <td><?=  $user->name?></td>
                                         <td><?= anchor('admin/user/edit/'.$user->id,$user->email) ?></td>
-                                        <td><a href="edit/<?=$user->id ?>" class="btn-round btn btn-primary">Edit</a></td>
-                                        <td><a href="delete/<?=$user->id ?>" class="btn-round btn btn-danger delete_entry" >Delete</a></td>
+                                        <td><a href="user/edit/<?=$user->id ?>" class="btn-round btn btn-primary">Edit</a></td>
+                                        <td><a href="user/delete/<?=$user->id ?>" class="btn-round btn btn-danger delete_entry" >Delete</a></td>
                                     </tr>
                                 <?php endforeach; ?>
                                     <?php else:?>

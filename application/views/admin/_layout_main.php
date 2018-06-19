@@ -19,13 +19,11 @@
 <section class="content profile-page">
     <div class="container-fluid">
 
-        <div class="row clearfix">
-            <div class="col-lg-12 col-md-12">
-                <div class="card">
+
 
                     <?php $this->load->view($subview); ?>
-            </div>
-        </div>
+
+
     </div>
 </section>
 

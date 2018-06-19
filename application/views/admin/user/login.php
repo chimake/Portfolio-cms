@@ -1,6 +1,6 @@
 <div class="header">
     <h5>Log in</h5>
-    
+
 </div>
 <?= validation_errors(); ?>
 <?= form_open(); ?>
