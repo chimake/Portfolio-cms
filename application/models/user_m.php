@@ -54,6 +54,7 @@ class User_M extends MY_Model
         if (count($user)) {
             // Log in user
             $data = array(
+                'role' => $user->role,
                 'name' => $user->name,
                 'email' => $user->email,
                 'id' => $user->id,
@@ -78,6 +79,7 @@ class User_M extends MY_Model
         $user->name = '';
         $user->email = '';
         $user->password = '';
+        $user->role = '';
         return $user;
     }
 

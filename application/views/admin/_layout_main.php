@@ -18,12 +18,7 @@
 
 <section class="content profile-page">
     <div class="container-fluid">
-
-
-
-                    <?php $this->load->view($subview); ?>
-
-
+        <?php $this->load->view($subview); ?>
     </div>
 </section>
 
