@@ -1,6 +1,6 @@
 <div class="header">
     <h5>Log in</h5>
-    <?= '<pre>'.print_r($this->session->userdata, TRUE).'</pre>'?>
+    
 </div>
 <?= validation_errors(); ?>
 <?= form_open(); ?>
