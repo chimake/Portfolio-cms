@@ -18,6 +18,7 @@
                 </li>
                 <li class="header">MAIN</li>
                 <li>  <?= anchor('admin/page','<i class="zmdi zmdi-collection-text zmdi-hc-fw"></i><span>Pages</span>') ?></li>
+                <li>  <?= anchor('admin/page/order','<i class="zmdi zmdi-collection-text zmdi-hc-fw"></i><span>Order Pages</span>') ?></li>
                 <li>  <?= anchor('admin/user','<i class="zmdi zmdi-account zmdi-hc-fw"><span>Users</span></i>') ?></li>
 
             </ul>
